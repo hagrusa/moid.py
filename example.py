@@ -6,11 +6,11 @@ import numpy as np
 
 #orbital elements of Earth and Didymos taken from JPL Horizons
 # #on 2024-01-01 w.r.t solar system barycenter
-a_earth = 0.9951504164652991
-e_earth = 0.0151391393004173
-i_earth = np.radians(0.009210993545298243)
-w_earth = np.radians(57.43291446810953)
-Omega_earth = np.radians(14.32664085927617)
+a_earth = 0.9951504164652991                #semimajor axis, au
+e_earth = 0.0151391393004173				#eccentricity
+i_earth = np.radians(0.009210993545298243)  #inclination
+w_earth = np.radians(57.43291446810953)     #argument of pericenter
+Omega_earth = np.radians(14.32664085927617) #longitude of ascending node
 
 
 a_didy = 1.651360984551208
