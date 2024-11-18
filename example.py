@@ -8,16 +8,16 @@ import numpy as np
 # #on 2024-01-01 w.r.t solar system barycenter
 a_earth = 0.9951504164652991                #semimajor axis, au
 e_earth = 0.0151391393004173				#eccentricity
-i_earth = np.radians(0.009210993545298243)  #inclination
-w_earth = np.radians(57.43291446810953)     #argument of pericenter
-Omega_earth = np.radians(14.32664085927617) #longitude of ascending node
+i_earth = 0.009210993545298243 #inclination
+w_earth = 57.43291446810953  #argument of pericenter
+Omega_earth = 14.32664085927617 #longitude of ascending node
 
 
 a_didy = 1.651360984551208
 e_didy = 0.3812739081678559
-i_didy = np.radians(3.410437379389624)
-w_didy = np.radians(319.3281724872755)
-Omega_didy = np.radians(72.92737351585056)
+i_didy = 3.410437379389624
+w_didy = 319.3281724872755
+Omega_didy = 72.92737351585056
 
 
 moid = moidpy.moid_func(a_earth, e_earth, i_earth, w_earth, Omega_earth,
@@ -29,8 +29,8 @@ print(f"Earth-Didymos MOID: {moid} au")
 # epoch={'start':'2024-01-01', 'stop':'2024-01-02', 'step':'10d'} #just want a single epoch
 # earth = Horizons(id=3,location='ssb', epochs=epoch).elements()
 # didymos = Horizons(id="Didymos",location='ssb', epochs=epoch, id_type='smallbody').elements() 
-# moid = moidpy.moid_func(earth['a'], earth['e'], np.radians(earth['incl']), np.radians(earth['w']), np.radians(earth['Omega']),
-# 							  didymos['a'], didymos['e'], np.radians(didymos['incl']), np.radians(didymos['w']), np.radians(didymos['Omega']))
+# moid = moidpy.moid_func(earth['a'], earth['e'], earth['incl'], earth['w'], earth['Omega'],
+# 							  didymos['a'], didymos['e'], didymos['incl'], didymos['w'], didymos['Omega'])
 # print(f"Earth-Didymos MOID: {moid} au")
 
 
